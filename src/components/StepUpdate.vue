@@ -407,6 +407,10 @@ const androidOptions = ref([
         label: "图像定位并点击",
       },
       {
+        value: "clickByText",
+        label: "图像文本定位并点击",
+      },
+      {
         value: "readText",
         label: "图像文字识别（暂时关闭）",
         disabled: true
@@ -603,6 +607,10 @@ const iOSOptions = ref([
       {
         value: "clickByImg",
         label: "图像定位并点击",
+      },
+      {
+        value: "clickByText",
+        label: "图像文本定位并点击",
       },
       {
         value: "readText",
@@ -974,7 +982,14 @@ onMounted(() => {
       <element-select label="控件截图" place="请选择控件元素截图"
                       :index="0" :project-id="projectId" type="image" :step="step"/>
     </div>
-
+    <div v-if="step.stepType==='clickByText'">
+      <el-form-item label="clickByText">
+        <el-input
+            v-model="step.content"
+            placeholder="请输入识别的文字"
+        ></el-input>
+      </el-form-item>
+    </div>
     <div v-if="step.stepType === 'readText'">
       <el-alert show-icon style="margin-bottom:10px" close-text="Get!" type="info"
                 title="TIPS: 默认语言包只有简体中文和英文，需要额外添加可以咨询管理员。"/>

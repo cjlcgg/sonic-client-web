@@ -199,6 +199,10 @@ defineProps({
       >{{ step.elements[0]['eleName'] }}</el-tag
       ><el-tag size="small">并点击</el-tag>
     </span>
+  <span v-if="step.stepType === 'clickByText'">
+    <el-tag size="small" style="margin-right: 5px">图片文字识别并点击</el-tag>
+      {{ step.content }}
+  </span>
   <span v-if="step.stepType === 'readText'">
       <el-tag size="small" style="margin-right: 10px">图像文字识别</el-tag>
       <el-tag size="small" type="info" style="margin-right: 10px">
