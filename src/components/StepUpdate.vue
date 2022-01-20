@@ -714,6 +714,9 @@ onMounted(() => {
             <el-option value="MENU"></el-option>
             <el-option value="APP_SWITCH"></el-option>
           </el-option-group>
+          <el-option-group label="键盘按键">
+            <el-option value="ENTER"></el-option>
+          </el-option-group>
           <el-option-group label="其他">
             <el-option value="BRIGHTNESS_DOWN"></el-option>
             <el-option value="BRIGHTNESS_UP"></el-option>

@@ -7,7 +7,7 @@ if (process.env.NODE_ENV === 'development') {
     baseURL = "http://localhost:8094/api"
 }
 if (process.env.NODE_ENV === 'production') {
-    baseURL = "http://SONIC_API_HOST:SONIC_API_PORT/api"
+    baseURL = "http://autotesting.folidaymall.com/api"
 }
 const $http = axios.create();
 $http.defaults.baseURL = baseURL
